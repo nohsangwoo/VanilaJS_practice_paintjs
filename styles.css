@@ -1,0 +1,92 @@
+@import "reset.css";
+
+body{
+    background-color: #f6f9fc;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;           
+    display: flex;   /*각 배치가 화면의 상태에따라 규칙에따라 변경됨 */
+    flex-direction: column;   /*flex상태에서 정렬 기준*/
+    align-items: center;   /* 속성은 플렉스 요소의 수직 방향 정렬 방식을 설정합니다.
+
+    이 속성은 한 줄만을 가지는 플렉스 박스에서는 효과가 없으며, 두 줄 이상을 가지는 플렉스 박스에서만 효과가 있습니다.    
+
+    이 속성은 다음과 같은 속성값을 가질 수 있습니다.
+
+    1. stretch : 기본 설정으로, 플렉스 요소의 높이가 플렉스 컨테이너의 높이와 같게 변경된 뒤 연이어 배치됩니다.
+
+    2. flex-start : 플렉스 요소는 플렉스 컨테이너의 위쪽에 배치됩니다.
+
+    3. flex-end : 플렉스 요소는 플렉스 컨테이너의 아래쪽에 배치됩니다.
+
+    4. center : 플렉스 요소는 플렉스 컨테이너의 가운데에 배치됩니다.
+
+    5. baseline : 플렉스 요소는 플렉스 컨테이너의 기준선(baseline)에 배치됩니다.
+    
+    */
+    padding: 50px 0px;
+}
+
+.canvas {
+    width: 700px;
+    height: 700px;
+    background-color: white;
+    border-radius: 15px ;  /*radius CSS 속성은 요소의 바깥 테두리 경계의 모서리를 둥글게 만듭니다. 하나의 값을 사용해 원형 모서리를, 두 개의 값을 사용해 타원형 모서리를 적용할 수 있습니다.*/
+    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08); /*그림자효과 주기*/
+}
+
+
+.controls {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .controls .controls__btns {
+    margin-bottom: 30px;
+  }
+
+
+  .controls__btns button{
+      all: unset;   
+      /*CSS 프로퍼티인 all은 부모로부터 전달받거나 현재 자신이 가지고 있는 모든 CSS 속성을 제거할 수 있도록 도와줍니다. 선택 가능한 값으로 아래와 같이 세 가지가 있습니다.
+      initial : 초기값으로 설정됨
+      inherit : 부모 상속된 스타일만 적용됨
+      unset : 초기 및 부모 스타일 속성 모두를 제거함*/
+      cursor:pointer;  /*커서를 올렸을때 포인터의 형식으로 마우스 커서가 봐뀜*/
+      background-color:white;
+      padding : 5px 0px;
+      width:80px;
+      text-align:center;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(18, 99, 85, 0.08); /*그림자효과 주기*/
+      border:2px solid  rgba(0, 0, 0, 0.2);   /*rgba rgb는 색을 a는 진하기를 설정하는듯 1이 100%*/
+      color: rgba(0, 0, 0, 0.8);   /*rgba rgb는 색을 a는 진하기를 설정하는듯 1=100%*/
+      text-transform: uppercase;  /*전부 대문자로 변환*/
+      font-weight:800; /*글씨 두께*/
+      font-size: 12px;
+  }
+
+  .controls__btns button:active{  /*마우스를 클릭했을때*/
+      transform: scale(0.98);   /*크기변화를 줘라  (1=100% 기준)*/
+  }
+  
+
+.controls .controls__colors{
+    display: flex;
+}
+
+.controls__colors .controls__color{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px; /*절반의 길이를 주면 원이됨*/
+    cursor:pointer;  /*커서를 올렸을때 포인터의 형식으로 마우스 커서가 봐뀜*/
+    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08); /*그림자효과 주기*/
+}
+
+.controls .controls__range{
+    margin-bottom:30px;
+}
+
+
+
+
